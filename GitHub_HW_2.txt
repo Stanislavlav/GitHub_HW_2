@@ -1,0 +1,57 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman (git branch Postman)
+- Jmeter (git branch Jmeter)
+- CheckLists (git branch CheckLists)
+- Bag Reports (git branch Bag_Reports)
+- SQL (git branch SQL)
+- Charles (git branch Charles)
+- Mobile testing (git branch Mobile_testing)
+
+2. Запушить все ветки на внешний репозиторий
+(git push -u origin Postman
+git push -u origin Jmeter
+git push -u origin CheckLists
+git push -u origin Bag_Reports
+git push -u origin SQL
+git push -u origin Charles
+git push -u origin Mobile_testing)
+Или (git push origin --all)
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+(git checkout Bag_Reports
+nano bag_report.txt)
+
+4. Запушить структуру багрепорта на внешний репозиторий
+(git add bag_report.txt
+git commit -m "add bag_report.txt"
+git push)
+
+5. Вмержить ветку Bag Reports в Main
+(git checkout main
+git merge Bag_Reports)
+
+6. Запушить main на внешний репозиторий.
+(git push -u origin main)
+
+7. В ветке CheckLists набросать структуру чек листа.
+(git checkout CheckLists
+nano cheklist.txt)
+
+8. Запушить структуру на внешний репозиторий
+(git add cheklist.txt
+git commit -m "add cheklist.txt"
+git push)
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+(На главной странице репозиториев в аккаунте GitHub кликаем на репозиторий в котором будет проводиться Pull Request.
+В меню сверху выбераем Pull Request, далее кликаем на New Pull Request.
+В окне выбора веток выбираем справа CheckLists, а слева main.
+Кликаем на Create Pull Request, заполняем комментарий и кликаем на Create Pull Request.
+В новом окне кликаем на Merge pull request.
+Вписываем дополнительный комментарий и кликаем на Confirm merge)
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+(git checkout main
+git fetch
+git pull)
